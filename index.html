@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Manip</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+      html {
+        font-family: "Roboto", sans-serif;
+        background-color: #e899dc;
+      }
+      .t {
+        text-align: center;
+      }
+      .ar{
+          margin: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="t">Text Manipulation Online</h1>
+
+    <textarea
+      id="in"
+      type="text"
+      placeholder="Enter text here!"
+      cols="50"
+      rows="10"
+      class="ar"
+    ></textarea>
+    <textarea
+      id="target"
+      type="text"
+      placeholder="Y o u  g e t  y o u r  t e x t  h e r e!"
+      cols="50"
+      rows="10"
+      class="ar"
+      style="float: right;"
+    ></textarea></p>
+
+    <script>
+      $("#in").keyup(function () {
+        var words = document.getElementById("in").value;
+        console.log(words);
+        words = words.split("").join(" ");
+        document.getElementById("target").value = words;
+      });
+    </script>
+  </body>
+</html>
